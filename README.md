@@ -44,5 +44,9 @@ GitHub: https://github.com/Pedro-Rudek
 
 ⭐ Obrigado por visitar meu perfil!
 
+</div>
 
+  <div align="center">
+  <img src="https://github.com/Pedro-Henrique-Graf-Vieira/Pedro-Henrique-Graf-Vieira/raw/output/github-contribution-grid-snake.svg" alt="Snake animation" />
+</div>
 
