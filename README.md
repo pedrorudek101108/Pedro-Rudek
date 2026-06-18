@@ -40,7 +40,7 @@
 
 ### 📫 Contato
 
-GitHub: https://github.com/Pedro-Rudek
+GitHub: https://github.com/pedrorudek101108
 
 ⭐ Obrigado por visitar meu perfil!
 
