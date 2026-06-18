@@ -43,3 +43,38 @@
 GitHub: https://github.com/Pedro-Rudek
 
 ⭐ Obrigado por visitar meu perfil!
+
+
+
+name: Generate Snake
+
+on:
+  # Executa automaticamente a cada 24 horas
+  schedule:
+    - cron: "0 0 * * *"
+  
+  # Permite executar manualmente a qualquer momento
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # Gera a animação da cobrinha a partir das contribuições
+      - name: generate github-contribution-grid-snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+          
+      # Envia os arquivos gerados para a branch 'output'
+      - name: push github-contribution-grid-snake to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
